@@ -3,28 +3,88 @@ body, .row-fluid, html {
     overflow-x: hidden;
 }
 
-/* Tweak navbar brand link to be super sleek
--------------------------------------------------- */
-
-body > .navbar {
-  font-size: 13px;
+.navbar .brand {
+    margin-left: 0;
 }
 
-/* Change the docs' brand */
-body > .navbar .brand {
-  padding-right: 0;
-  padding-left: 0;
-  margin-left: 20px;
-  font-weight: bold;
-  color: #000;
-  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
-  -webkit-transition: all .2s linear;
-     -moz-transition: all .2s linear;
-          transition: all .2s linear;
+.navbar .display .brand {
+    margin-left: -20px;
 }
-body > .navbar .brand:hover {
-  text-decoration: none;
-  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.4);
+
+.checkbox input[type="checkbox"].cb-list-limit {
+    margin-left: 3px;
+}
+
+/* Configuration Page */
+
+.payment_confirm {
+    color:#458B00;
+}
+
+.payment-confirm-alert {
+    background-color:#F5F5F5;
+    border-color:gray;
+}
+
+.config-alert {
+    width:285px;
+}
+
+h1.collabspot-config {
+    margin-top:10px;
+    margin-bottom:10px;
+}
+li p {
+    margin: 0;
+    padding: 0;
+}
+
+.box-title {
+    font-family: Avenir LT Std 55 Roman;
+    font-weight:bold;
+    font-size:18px;
+    margin-bottom:7px;
+}
+
+.box {
+    width:225px;
+    border: 2px solid rgba(255, 245, 238, 0.4);
+    border-color:#FF7F00;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    padding-top:10px;
+    padding-left:9px;
+    padding-right:9px;
+    height:275px;
+    font-family: "Helvetica Neue","Helvetica","Arial","sans-serif";
+}
+
+.plan {
+    position: relative;
+    float: left;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    height:200px;
+    margin-bottom:10px;
+    margin-top:10px;
+}
+
+.free-plan-title {
+    color:#CD7F32;
+    text-align:center;
+}
+
+.basic-plan-title {
+    color:silver;
+    text-align:center;
+}
+.enterprise-plan-title {
+    color:silver;
+    text-align:center;
+}
+
+.premium-plan-title {
+    color:#C5B358;
+    text-align:center;
 }
 
 /* Custom CSS scrollbar */
@@ -32,7 +92,7 @@ body > .navbar .brand:hover {
     width: 8px;
     height: 8px;
     border-radius: 5px;
-    background: none;
+  background: none;
 }
 ::-webkit-scrollbar-track:vertical {
     background: none;
@@ -46,8 +106,24 @@ body > .navbar .brand:hover {
     display: none;
 }
 
+
 .row-fluid {
     position: fixed;
+}
+.row-fluid.hidden{
+    display: none;
+}
+.row-fluid.board-content{
+    background-image: url(/static/bootstrap/docs/assets/img/grid-18px-masked.png);
+    background-repeat:repeat-x;
+}
+.row-fluid.board-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 30%;
+  width: 50%;
+  margin: -15% 0 0 -25%;
 }
 .row-fluid.board-loading .span3{
     float: none;
@@ -57,5 +133,1822 @@ body > .navbar .brand:hover {
     margin-left: 15px;
 }
 
-/* Devcup
--------------------------------------------------- */
+li {
+    color: black;
+}
+
+label.error {color: #B94A48;}
+
+body {
+    padding-top: 45px;
+}
+.board-status-container {
+    position: absolute;
+    right: 10px;
+    z-index: 10000;
+}
+.board-status-container .board-status-list{
+    list-style: none;
+}
+
+.connection-status {
+    line-height: 40px;
+}
+.label, .member {
+    z-index: 1019;
+}
+
+.card .member {
+    z-index: 1;
+}
+.typeahead.dropdown-menu {
+    max-width: 300px;
+}
+
+#clear-filter {
+    position: absolute;
+    top: 1px;
+    left: 235px;
+    width: 75px;
+    margin-top: 0;
+}
+#clear-filter.hide {
+    display:none;
+}
+.btn.add {
+    margin-top: 2px;
+    margin-left: 2px;
+}
+
+#board-container {
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.navbar-inner.offline {
+    background-image: -webkit-linear-gradient(top, #666, #555);
+}
+
+.navbar-inner.offline .divider-vertical {
+    border-right: 1px solid #666;
+    background-color: #555;
+}
+
+.navbar .pull-right {
+    margin-right: 10px;
+}
+
+ul.board {
+    margin-bottom:0;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+#circle {
+    width: 28px;
+    height: 28px;
+    background: green;
+    -moz-border-radius: 28px;
+    -webkit-border-radius: 28px;
+    border-radius: 28px;
+    text-align: center;
+}
+
+.dropdown-menu.board-activities {
+    width: 340px;
+    height: 400px;
+    max-width: none;
+    min-width: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+
+#board-activities-modal {
+    min-height: 508px;
+}
+#board-activities-modal .modal-body {
+    height: 100%;
+}
+#board-activities-modal .modal-footer {
+    height: 20px;
+}
+.all-activities-container {
+    height: 500px;
+}
+.all-activities-container > ul .recent-body {
+    width: 80%;
+}
+
+.recent-activities {
+    height: 95%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 10px;
+}
+
+.all-activities-container > ul, .activities-list {
+    list-style: none;
+    margin-left: 5px;
+}
+/* Subscription Plans Text */
+.max-num-boards-text {
+    line-height:14px;
+    padding-top:10px;
+}
+.domain-plan-text {
+    color: green;
+}
+.max-num-boards-notice {
+    margin-top:3px;
+}
+
+/* for new homepage layout */
+
+.copyright {
+    margin-top:250px;
+    text-align:center;
+}
+
+.num-boards-domain {
+    float: left;
+    margin-left: 1px;
+}
+
+.home-tabs-header {
+    height:37px;
+}
+.boards-page-header {
+}
+.help-block {
+    margin-bottom:0px;
+}
+.switch-view {
+    float:right;
+    text-align:right;
+}
+h3.this-week-header {
+    color:#215E21;
+}
+h3.tomorrow-header {
+    color:#215E21;
+}
+h3.today-header{
+    color:#EC5800;
+}
+.board-in-list-view {
+    margin-bottom:10px;
+    clear:both;
+}
+.container-fluid {
+    margin-left:20px;
+}
+.collab {
+    color: #F24F11;
+}
+.spot {
+    color:#1E96C5;
+}
+.card-with-due-date-info {
+    margin-top:2px;
+}
+
+h3.past-due {
+    color:#C80000
+}
+.display-inline {
+    display:inline;
+}
+.board-list-alphabetical {
+    float:left;
+    margin-left:10px;
+}
+.newline-after-float {
+    clear: both;
+    float: left;
+    display: block;
+    position: relative;
+}
+.members-container {
+    float:left;
+}
+img.board-member {
+    float:left;
+    width:35px;
+    height:35px;
+    margin:0 1px 0 0;
+}
+.board-stats {
+    float:left;
+    margin: 5px 15px 10px 0;
+    border: 2px solid rgba(255, 245, 238, 0.4);
+    border-color:black;
+    border-radius: 4px 4px 4px 4px;
+    padding:2px 4px 2px;
+    background-color: #d74a38;
+    color: white;
+}
+.list-stat-number {
+    text-align:center;
+}
+.board-box {
+    float:left;
+    width:230px;
+    border-style:solid;
+    border-width:2px;
+    border-color:#B8B8B8;
+    border-radius: 4px 4px 4px 4px;
+    margin-left:10px;
+    margin-bottom:10px;
+    padding:5px 10px 5px 10px;
+}
+a.show-archived-text {
+    margin-left:10px;
+    margin-top:15px;
+}
+.show-archived-text-container {
+    margin-bottom:10px;
+}
+#edit-active-domain {
+    display: none;
+}
+#confirm-archive-board {
+    display: none;
+}
+#copy-board-modal {
+    display: none;
+}
+#copy-board-modal .new-board-name{
+    width: 400px;
+}
+#confirm-restore-board {
+    display: none;
+}
+.create-new-board-container {
+    float:left;
+    margin-left:10px;
+    padding: 10px 15px;
+}
+.last-modification-text {
+    float:left;
+}
+a.board-menu {
+    float:left;
+    margin-bottom:5px;
+    margin-right:10px;
+}
+ul.boards {
+    margin: 0 0 9px 0;
+}
+.board-activities .activity .activity-body {
+    width: 250px;
+}
+.board-activities .activity  {
+    padding-left: 10px;
+}
+.well {
+    float:left;
+    margin-top:10px;
+}
+
+/*.row > [class*="span"] {
+    margin-left: 5px;
+}*/
+
+.list ul {
+    margin: 0;
+}
+
+.list .list-close {
+    border: 1px solid red;
+}
+
+.list .cards {
+    margin: 0;
+    background-color: white;
+    padding:  0;
+    /*flow: auto;*/
+}
+
+.cards-list {
+    margin-top: -15px;
+    position: relative;
+    z-index: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.cards-list .ui-sortable {
+    overflow-x: hidden;
+    height: 100%;
+/*    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+*/
+}
+
+.cards .input-append {
+    margin: 4px;
+}
+
+
+.list hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.list .jspVerticalBar {
+    width: 10px;
+}
+
+.card:hover {
+  border-color: rgba(82, 168, 236, 0.8);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+}
+.card {
+    /* copied from .well */
+    background-color: #f5f5f5;
+    margin: 0 2px 10px 2px;
+    padding: 0;
+    min-height: 20px;
+    border: 1px solid #eee;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    position: relative;
+    list-style: none;
+    /* z-index: 1; */
+    display: block;
+
+}
+
+.marker {
+     height: 10px;
+     margin-left: 2px;
+     margin-right: 2px;
+     background-color: #333333;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+
+ul .card:last-child {
+    margin-bottom: 20px;
+}
+
+.card.archived {
+    display: none;
+    opacity: 0.5;
+}
+.card.filtered {
+    display: none;
+    opacity: 0.5;
+}
+.clear-search{
+    margin-top: 1px;
+    height: 27px;
+}
+
+#filter-me {
+    color: grey;
+}
+
+#filter-me:hover {
+    color: white;
+}
+
+.empty-list li.menu-delete-list {
+    display: block;
+}
+.empty-list li.trash-list {
+    display: none;
+}
+
+li.menu-delete-list {
+    display: none;
+}
+
+.show-archived .card.archived {
+    display: block;
+}
+
+.show-archived li.show-archived-cards {
+    display: none;
+}
+
+li.hide-archived-cards {
+    display: none;
+}
+
+.show-archived li.hide-archived-cards {
+    display: block;
+}
+
+.empty-archived li.hide-archived-cards, .empty-archived li.show-archived-cards {
+    display: none;
+}
+.restore-card {
+    display: none !important;
+}
+
+.card.archived li.restore-card {
+    display: block !important;
+}
+
+.card.archived li.archive-card {
+    display: none !important;
+}
+
+.card .handle {
+    background-color: #E6E6E6;
+    width: 10px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    cursor: move;
+    -webkit-border-radius: 4px 0 0 4px !important;
+    -moz-border-radius: 4px 0 0 4px !important;
+    border-radius: 4px 0 0 4px !important;
+}
+
+.card.selected .handle {
+    background-color: #404040;
+}
+
+.card .content {
+    padding:8px 8px 2px;
+}
+
+.card table {
+    width: 100%;
+}
+
+.card table, .card td {
+    border-width: 0;
+    margin: 0;
+}
+
+.card-input {
+    margin-top: -5px;
+    margin-left: -6px;
+    margin-bottom: -5px;
+}
+
+.list ul, .list {
+    list-style: none;
+}
+
+.card.editing .display,
+.card .edit {
+    display: none;
+}
+
+.card.editing .edit {
+    display: block;
+}
+
+/* editing of the board name */
+
+.board-infos.editing .display,
+.board-infos .edit {
+    display: none;
+}
+
+.board-infos.editing .edit {
+    display: block;
+}
+
+#board-name-input {
+    float: left;
+    color: #333;
+    font-size: 20px;
+    margin-top: 5px !important;
+}
+
+/* editing of the list name */
+.list-header {
+    /*padding-bottom: 10px;*/
+    position: relative;
+    background-color: white;
+    /* width: 280px; */
+
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+
+
+.list-header .input-append {
+    margin-bottom: 0;
+}
+
+.display-list {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #d74a38;
+    color: white;
+}
+
+.display-list h2 {
+    color: inherit;
+    font-weight: normal;
+}
+
+.editing-list-title .display-list,
+.list .edit-list {
+    display: none;
+}
+.card-marker {
+    width: 98%;
+
+    /*background-color: #f5f5f5;*/
+    /*background-color: smokewhite;*/
+    border: 1px dashed #555555;
+    margin-bottom: 10px;
+    margin-left: 2px;
+    /*opacity: 0.3;*/
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.list-marker {
+    float: left;
+    width: 10px;
+    list-style: none;
+    margin-left: 10px;
+    background-color: #555555;
+    opacity: 0.3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.editing-list-title .edit-list {
+    display: block;
+}
+
+input.list-title-input {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: bold;
+    color: #404040;
+    height: 36px;
+}
+
+.btn.add-on {
+    height: 28px;
+}
+
+input.new-card {
+    width: 235px;
+}
+
+.list-header .btn {
+    line-height: 12px;
+    padding-bottom: 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h2.list-title {
+    margin-left: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    padding-right: 60px;
+}
+.display-list .list-card-count{
+    font-size: 1.4em;
+    display: inline-block;
+    position: absolute;
+    right: 1.7em;
+    top: 50%;
+    background: #D74A38;
+    line-height: 0.8em;
+    height: 0.8em;
+    padding: .4em .7em;
+    margin: -.8em 0 0 0;
+    color: white;
+    text-indent: 0;
+    text-align: center;
+    -webkit-border-radius: .769em;
+    -moz-border-radius: .769em;
+    border-radius: .769em;
+    -webkit-box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, .26), 0 1px 0 0 rgba(255, 255, 255, .15);
+    -moz-box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, .26), 0 1px 0 0 rgba(255, 255, 255, .15);
+    box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, .26), 0 1px 0 0 rgba(255, 255, 255, .15);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .5);
+    font-weight: 500;
+}
+
+.label .close {
+    position: relative;
+    top: 2px;
+    float: none;
+    font-size: 16px;
+    margin-left: 2px;
+}
+
+.card .labels {
+    float: left;
+}
+
+.card .assigned {
+    float: right;
+    margin-top: 10px;
+}
+
+.card .infos {
+  clear: both;
+  color: #999;
+  min-height: 8px;
+  padding-top: 4px;
+}
+
+.card .infos .icon-comment, .card .infos .icon-file, .card .infos .icon-time, .card .infos .icon-th-list {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+}
+
+.card .infos .past-due-date {
+    color: #d14;
+}
+
+.member {
+    width: 35px;
+    height: 35px;
+    position: relative;
+}
+
+.member .user-thumbnail, .activity .user-thumbnail {
+    width: 35px;
+    height: 35px;
+}
+
+.member .close{
+    display: none;
+    position: absolute;
+}
+
+.member.online .online{
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 14px;
+    height: 14px;
+    background-image: url('/static/images/online_icon.png');
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.member:hover .close {
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 20px;
+    width: 14px;
+    height: 14px;
+    background-image: url('/static/images/circle_remove.png');
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.fluid-sidebar.hidden{
+    /* display: none; */
+}
+.fluid-sidebar .widget{
+    margin-top: 5px;
+}
+.fluid-sidebar .label, .fluid-sidebar .member {
+    margin-left: 2px;
+    cursor: move;
+}
+.fluid-sidebar .label-menu, .member-menu{
+    line-height: 13.5px;
+    cursor: pointer;
+    float: right;
+}
+.fluid-sidebar .label-menu .dropdown-menu{
+    left: 0;
+}
+.fluid-sidebar .label-menu .dropdown-toggle, .member-menu .dropdown-toggle{
+    opacity: 0.5;
+}
+.fluid-sidebar .label-menu .dropdown-toggle:hover, .member-menu .dropdown-toggle:hover{
+    opacity: 1;
+}
+.fluid-sidebar .label-header, .member-header {
+    width: 100%;
+}
+.fluid-sidebar .labels, .members {
+    display: block;
+}
+.fluid-sidebar .minimize .labels,.minimize .members, .minimize .menu {
+    display: none;
+}
+.fluid-sidebar .label-container {
+    clear: both;
+    margin-top: 2px;
+}
+.fluid-sidebar .labels-container, .members-container {
+    padding-bottom: 5px;
+    width: 90%;
+}
+.fluid-sidebar .label-container .label {
+    max-width: 90px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+
+.fluid-sidebar .members-title, .labels-title {
+    cursor: pointer;
+}
+
+.fluid-sidebar .label {
+    float: left;
+    height: 15px;
+}
+
+.fluid-sidebar .edit-label {
+    width: 15px;
+    height: 15px;
+    filter: alpha(opacity = 25);
+    -khtml-opacity: 0.25;
+    -moz-opacity: 0.25;
+    opacity: 0.25;
+    background: transparent url("/static/settings-15.png") no-repeat right top;
+    float: left;
+    visibility: hidden;
+}
+.edit-label.visible {
+    visibility: visible;
+}
+
+.fluid-sidebar .edit-label:hover {
+    filter: alpha(opacity = 100);
+    -khtml-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+}
+.label-filter {
+    float: left;
+    filter: alpha(opacity = 25);
+    -khtml-opacity: 0.25;
+    -moz-opacity: 0.25;
+    opacity: 0.25;
+    visibility: hidden;
+}
+.label-filter.visible {
+    visibility: visible;
+}
+.label-filter:hover {
+    filter: alpha(opacity = 100);
+    -khtml-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+}
+
+.popover .content {
+    padding: 0;
+
+}
+
+.popover .content p {
+    padding-top: 18px;
+
+}
+
+.popover .content input {
+    margin-left: 18px;
+}
+
+.popover .actions {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.popover.right-below .arrow {
+    top: 20px;
+    left: 0;
+    margin-top: -5px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid #000000;
+}
+
+.card-menu .dropdown-toggle, .list-menu  .dropdown-toggle, .label-menu .dropdown-toggle, .member-menu .dropdown-toggle {
+    width: 21px;
+    height: 21px;
+    display: block;
+}
+
+.dropdown.open .dropdown-toggle {
+    background: transparent;
+}
+
+.card .dropdown-menu, .list-header .dropdown-menu, .label-header .dropdown-menu {
+    right: 0;
+    left: auto;
+    z-index: 30;
+}
+
+.card .card-desc {
+    margin-right: 3px;
+    width: 15px;
+    height: 17px;
+    filter: alpha(opacity = 25);
+    -khtml-opacity: 0.25;
+    -moz-opacity: 0.25;
+    opacity: 0.25;
+    background: transparent url("/static/images/desc_icon.png") no-repeat right top;
+    float: left;
+}
+.card:last-child .dropdown-menu {
+    top: auto;
+    bottom: 100%;
+    margin-bottom: 2px;
+    z-index: 30;
+}
+
+/*we only make sure it open int he correct direction if there is only 1 card */
+.card:first-child .dropdown-menu {
+    top: 100%;
+    bottom: auto;
+    z-index: 30;
+}
+
+.card:last-child .dropdown-menu>li a.menu-move-bottom {
+    display: none;
+}
+
+.card:first-child .dropdown-menu>li a.menu-move-top {
+    display: none;
+}
+
+.card-menu, .list-menu {
+    line-height: 13.5px;
+    position: absolute;
+
+    cursor: pointer;
+}
+
+.card-menu {
+    top: 0;
+    right: 0;
+}
+
+.list-menu {
+    top: 5px;
+    right: 3px;
+}
+
+.card-menu.open {
+    opacity: 1;
+}
+
+table.color-picker {
+    width: 100px;
+}
+
+.color-selector {
+    position: relative;
+    height: 13px;
+    width: 13px;
+    border: 1px solid #888;
+    line-height: 11px;
+}
+
+.color-cell {
+    margin: 0;
+    padding: 2px;
+    border: 0;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 90%;
+    font-family: arial, sans-serif;
+    cursor: pointer;
+}
+
+.humane {
+    top: 50px;
+}
+
+/*
+** Sidebar
+*/
+
+.sidebar-left {
+    padding-left: 155px;
+}
+
+.sidebar-left .fluid-sidebar {
+    /*padding-left: 155px;*/
+
+    margin: 0 0 0 -155px;
+    padding-top: 10px;
+}
+
+.fluid-sidebar {
+    z-index: 2;
+    display: block;
+}
+
+.fluid-sidebar.left {
+    left: 0;
+    width: 173px;
+    background-color: white;
+    border-right: 1px solid #ddd;
+    -webkit-box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.card-edit-sidebar{
+    right: 0;
+    left: initial;
+    float: right;
+
+    padding-left: 5px;
+    padding-right: 10px;
+    overflow-y: auto;
+    width: 400px;
+    background-color: white;
+    position: absolute;
+
+    border-left: 1px solid #ddd;
+    -webkit-box-shadow: -2px 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: -2px 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: -2px 1px 1px rgba(0, 0, 0, 0.075);
+
+}
+
+.close-edit-card {
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+    margin-left: -6px;
+    margin-bottom: 5px;
+    padding-bottom: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+    height: 21px;
+}
+
+/*
+.container-fluid > .content {
+    margin-left: 155px;
+}*/
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.fluid-sidebar h5 {
+    margin-left: 2px;
+}
+
+.fluid-sidebar .sidebar-toggle {
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+    margin-left: -6px;
+    margin-bottom: 5px;
+    padding: 7px;
+    margin-top: 5px;
+    float: right;
+
+}
+
+.fluid-sidebar #add-list {
+    margin-left: 6px;
+    margin-bottom: 5px;
+    padding: 7px;
+    margin-top: 5px;
+}
+.fluid-sidebar .members-container {
+    margin-left: 6px;
+}
+.fluid-sidebar .members {
+    margin-left: 5px;
+}
+.fluid-sidebar .labels-container {
+    margin-left: 6px;
+}
+
+.card-edit-sidebar {
+    display: none;
+    right: -400px;
+}
+
+.card-edit-sidebar.visible {
+    display: block;
+}
+
+.card-edit-sidebar input, .card-edit-sidebar textarea {
+    width: 380px;
+}
+
+.card-edit-sidebar input[name=task-due-date] {
+    width: 100px;
+}
+
+/*
+** Activity Stream
+*/
+.ui-resizable-s {
+   /*border-bottom: 1px solid #E9EAEE;*/
+   border-top: 1px solid #CAD0DB;
+   border-bottom: 1px solid #CAD0DB;
+   cursor: ns-resize;
+   width: 100%;
+   background: #F0F1F6;
+   height: 10px;
+   z-index: 0;
+}
+
+/*.ui-resizable-s div {
+    background: #E7E9EF;
+    border-bottom: 1px solid #C1C9D5;
+    border-top: 1px solid #F0F1F6;
+    height: 4px;
+    position: relative;
+}
+.ui-resizable-s div span {
+    background: #F0F1F6;
+    border-top: 1px solid #CAD0DB;
+    display: block;
+    height: 1px;
+    left: 50%;
+    margin-left: -6px;
+    margin-top: 1px;
+    position: absolute;
+    width: 12px;
+}
+*/
+.side-widgets {
+    position: relative;
+    overflow: hidden;
+    height: 40%;
+}
+.activities-container {
+    display: block;
+    height: 45%;
+    padding-bottom: 10px;
+}
+
+.activities-container h5{
+    margin-left: 6px;
+}
+ul.activities {
+    list-style: none;
+    margin-left: 0;
+}
+
+.activity {
+    clear: both;
+    padding-top: 5px;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    display: block;
+    position: relative;
+}
+
+.recent-activity {
+    opacity: 0.6;
+}
+.recent-activity .label{
+    float: none;
+}
+.recent-activity .card-name {
+    color: black;
+}
+.ellipsisy {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.activity-block {
+    display: block;
+    /*border-top: solid 1px #E9E9E9;*/
+    padding-top: 2px;
+    border-bottom: solid 1px #E9E9E9;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: -1px;
+}
+.activity-block:hover {
+    background-color: #f5f5f5;
+}
+
+.activity-msg, #all-activities .activity, #my-activities .activity {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.recent-activity .recent-thumbnail {
+    float: left;
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+}
+.recent-activity .recent-body {
+    margin-left: 30px;
+    width: 135px;
+}
+.activity .user-thumbnail {
+    float: left;
+}
+
+.activity-body {
+    float: left;
+    margin-left: 5px;
+    width: 500px;
+}
+
+.activity-body span {
+    font-weight: bold;
+}
+
+.activity-body p {
+    margin-bottom: 0;
+}
+
+.activity .activity-comment {
+    font-style: italic;
+    padding-left: 10px;
+}
+
+.activity-body .activity-time {
+    color: #666;
+}
+
+.input-prepend .add-on, .input-append .add-on {
+    z-index: 1;
+}
+
+.topbar {
+    height: 40px;
+    position: relative;
+}
+
+/* --------------------------------- autocomplete */
+.ui-autocomplete {
+    position: absolute;
+    cursor: default;
+    background-color: white;
+    border: 1px solid black;
+    padding: 9px;
+    margin: 10px;
+}
+.ui-menu {
+    list-style: none;
+    padding: 5px;
+    margin: 0;
+    display: block;
+    float: left;
+
+}
+.ui-menu-item a {
+    text-decoration: none;
+    display: block;
+    padding: 1px 5px 1px 6px;
+    line-height: 1.5;
+    zoom: 1;
+}
+
+/*
+ * jQuery UI Autocomplete 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Autocomplete#theming
+ */
+.ui-autocomplete { position: absolute; cursor: default; }
+
+/* workarounds */
+* html .ui-autocomplete { width:1px; } /* without this, the menu expands to 100% in IE6 */
+
+/*
+ * jQuery UI Menu 1.8.16
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Menu#theming
+ */
+.ui-menu {
+  list-style:none;
+  padding: 2px;
+  margin: 0;
+  display:block;
+  float: left;
+}
+.ui-menu .ui-menu {
+  margin-top: -3px;
+}
+.ui-menu .ui-menu-item {
+  margin:0;
+  padding: 0;
+  zoom: 1;
+  float: left;
+  clear: left;
+  width: 100%;
+}
+.ui-menu .ui-menu-item a {
+  text-decoration:none;
+  display:block;
+  padding:.2em .4em;
+  line-height:1.5;
+  zoom:1;
+}
+.ui-menu .ui-menu-item a.ui-state-hover,
+.ui-menu .ui-menu-item a.ui-state-active {
+  font-weight: bold;
+  margin: -1px;
+}
+
+
+/* List of boards */
+.boards li {
+    margin-bottom: 5px;
+}
+
+.boards .help-block {
+    margin-top: 0;
+}
+
+ul.boards {
+    list-style: none;
+    margin-left:0px;
+}
+
+
+/* Date Picker */
+.datepicker {
+  background-color: #ffffff;
+  border-color: #999;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  display: none;
+  position: absolute;
+  z-index: 900;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 18px;
+  padding-bottom: 4px;
+  width: 218px;
+}
+.datepicker .nav {
+  font-weight: bold;
+  width: 100%;
+  padding: 4px 0;
+  background-color: #f5f5f5;
+  color: #808080;
+  border-bottom: 1px solid #ddd;
+  -webkit-box-shadow: inset 0 1px 0 #ffffff;
+  -moz-box-shadow: inset 0 1px 0 #ffffff;
+  box-shadow: inset 0 1px 0 #ffffff;
+  zoom: 1;
+}
+.datepicker .nav:before, .datepicker .nav:after {
+  display: table;
+  content: "";
+  zoom: 1;
+  *display: inline;
+}
+.datepicker .nav:after {
+  clear: both;
+}
+.datepicker .nav span {
+  display: block;
+  float: left;
+  text-align: center;
+  height: 28px;
+  line-height: 28px;
+  position: relative;
+}
+.datepicker .nav .bg {
+  width: 100%;
+  background-color: #fdf5d9;
+  height: 28px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.datepicker .nav .fg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.datepicker .button {
+  cursor: pointer;
+  padding: 0 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.datepicker .button:hover {
+  background-color: #808080;
+  color: #ffffff;
+}
+.datepicker .months {
+  float: left;
+  margin-left: 4px;
+}
+.datepicker .months .name {
+  width: 72px;
+  padding: 0;
+}
+.datepicker .years {
+  float: right;
+  margin-right: 4px;
+}
+.datepicker .years .name {
+  width: 36px;
+  padding: 0;
+}
+.datepicker .dow, .datepicker .days div {
+  float: left;
+  width: 30px;
+  line-height: 25px;
+  text-align: center;
+}
+.datepicker .dow {
+  font-weight: bold;
+  color: #808080;
+}
+.datepicker .calendar {
+  padding: 4px;
+}
+.datepicker .days div {
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.datepicker .days div:hover {
+  background-color: #0064cd;
+  color: #ffffff;
+}
+.datepicker .overlap {
+  color: #bfbfbf;
+}
+.datepicker .today {
+  background-color: #fee9cc;
+}
+.datepicker .selected {
+  background-color: #bfbfbf;
+  color: #ffffff;
+}
+/*
+ * Trashed list modal
+ */
+#trash-list-modal {
+    height: 535px;
+}
+
+#trash-list-modal .trash-table-container {
+    height: 400px;
+}
+
+#trash-list-modal .trashed-date-head {
+    width: 80px;
+}
+#trash-list-modal .trashed-title-head {
+    width: 100px;
+}
+#trash-list-modal .trashed-cards-head {
+    text-align: center;
+    width: 80px;
+}
+#trash-list-modal .trashed-restore-head {
+    width: 70px;
+}
+
+#trash-list-modal .trashed-cards {
+    text-align: center;
+}
+#trash-list-modal .trashed-cards span {
+    background-color: #d74a38;
+    color: white;
+}
+
+/*
+ * Edit card modal
+ */
+
+#edit-card-modal {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    max-height: none;
+    display: none;
+    max-width: 990px;
+}
+
+#edit-card-modal .modal-body {
+    max-height: none;
+}
+#edit-card-modal .info {
+    color: #999;
+}
+
+#edit-card-modal .row {
+    margin-left: 0px;
+}
+
+#edit-card-modal .modal-body {
+    padding: 15px 0 0 0;
+}
+
+#edit-card-modal .checklist {
+    width: 400px;
+}
+#edit-card-modal .checklist tbody > tr .task-delete {
+    visibility: hidden;
+}
+#edit-card-modal .checklist tbody > tr:hover .task-delete {
+    visibility: visible;
+}
+#edit-card-modal .checklist tbody th, .checklist tbody td {
+    padding: 0px;
+    padding-top: 3px;
+    padding-left: 18px;
+}
+
+#edit-card-modal .task-delete {
+    float: left;
+    filter: alpha(opacity = 25);
+    -khtml-opacity: 0.25;
+    -moz-opacity: 0.25;
+    opacity: 0.25;
+    visibility: hidden;
+}
+#edit-card-modal .task-delete:hover {
+    filter: alpha(opacity = 100);
+    -khtml-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+}
+#edit-card-modal .cl-cb {
+    width: 10px;
+    float: left;
+}
+
+#edit-card-modal .cl-task {
+    float: left;
+    margin-left: 15px;
+}
+#edit-card-modal .cl-task label {
+    width: 320px;
+}
+
+#edit-card-modal .subtask .cl-cb .icon-ok {
+    display:none;
+}
+#edit-card-modal .subtask.task-done .cl-cb .icon-ok {
+    display:block;
+}
+
+#edit-card-modal .subtask .cl-cb  input[type=checkbox] {
+    display:block;
+}
+#edit-card-modal .subtask.task-done .cl-cb  input[type=checkbox] {
+    display:none;
+}
+#edit-card-modal .subtask.task-done label {
+    text-decoration: line-through
+}
+#edit-card-modal .sb-item {
+    width: 400px;
+}
+#edit-card-modal .cl-input {
+    margin-left: 25px;
+    margin-top: -20px;
+    height: 50px;
+}
+
+#edit-card-modal input[name=subtask-add] {
+    margin: 1px;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+#edit-card-modal input[name=subtask-add]:hover, #edit-card-modal input[name=subtask-add]:focus {
+    margin: 0px;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+
+#edit-card-modal .list-assign {
+    width: 120px;
+}
+#edit-card-modal .display-card-location, #edit-card-modal .edit-card-location {
+    margin-left: 12px;
+}
+#edit-card-modal .label-select {
+    width: 250px;
+}
+#edit-card-modal .member-assign {
+    width: 250px;
+}
+#edit-card-modal .task-new-activity {
+    width: 540px;
+}
+
+#edit-card-modal .activity.hidden {
+    visibility: hidden;
+}
+#edit-card-modal .activity-body .activity-actions{
+    visibility: hidden;
+}
+#edit-card-modal .activity-body:hover .activity-actions{
+    visibility: visible;
+}
+.label-filter {
+    float: left;
+    filter: alpha(opacity = 25);
+    -khtml-opacity: 0.25;
+    -moz-opacity: 0.25;
+    opacity: 0.25;
+    visibility: hidden;
+}
+
+.activity-edit, .activity-remove {
+    float: left;
+    filter: alpha(opacity = 25);
+    -khtml-opacity: 0.25;
+    -moz-opacity: 0.25;
+    opacity: 0.25;
+}
+.activity-edit:hover, .activity-remove:hover {
+    filter: alpha(opacity = 100);
+    -khtml-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+}
+
+#edit-card-modal .search-choice {
+    background-image: none;
+    border: none;
+}
+
+#edit-card-modal li.search-field, #edit-card-modal .chzn-container, #edit-card-modal .chzn-choices {
+    background: white;
+    background-color: white;
+    margin: 0 2px 10px 2px;
+    padding: 0;
+    min-height: 20px;
+    border: 0px solid #eee;
+    border: 0px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    list-style: none;
+    /* z-index: 1; */
+    display: block;
+}
+#edit-card-modal .chzn-choices {
+    border: 2px solid white;
+}
+#edit-card-modal .list-selection, #edit-card-modal .pos-selection {
+    float: left;
+}
+#edit-card-modal .list-selection {
+    width: 55%;
+}
+#edit-card-modal .pos-selection {
+    width: 30%;
+}
+#edit-card-modal .chzn-choices:hover {
+    border: 2px solid #eee;
+    border: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+#edit-card-modal textarea {
+    width: 580px; /* the plugin to do the autogrow does not like %*/
+    resize: none;
+}
+#edit-card-modal .btn-duedate {
+    height: 18px;
+}
+#label-config-modal .label-title {
+    font-size: 18px;
+}
+.label-config input[name=label-title] {
+    background-color: transparent;
+    color: inherit;
+    font-size: 18px;
+    margin: 1px;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+.label-config input[name=label-title]:hover,  .label-config input[name=label-title]:focus {
+    background-color: white;
+    color: black;
+    margin: 0;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+
+#list-config-modal {
+    display: none;
+}
+.list-config input[name=li-title] {
+    background-color: transparent;
+    color: inherit;
+    font-size: 18px;
+    margin: 1px;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+.list-config input[name=li-title]:hover,  .list-config input[name=li-title]:focus {
+    background-color: white;
+    color: black;
+    margin: 0;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+#edit-card-modal input[name=task-title] {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 1px;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+#edit-card-modal input[name=task-title]:hover, #edit-card-modal input[name=task-title]:focus {
+
+    margin: 0;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+
+#edit-card-modal input[name=task-due-date] {
+    width: 150px;
+}
+
+#edit-card-modal .attachment img {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.picker.modal-dialog {
+    z-index: 2001;
+}
+
+.modal-dialog-bg {
+    z-index: 2000;
+}
+
+.navbar .nav > li.hide {
+    display: none;
+}
+
+.gritter-title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.list {
+    /*padding-right: 5px;
+    border-right: rgba(0, 0, 0, 0.05) solid 1px;*/
+    width: 280px;
+}
+
+#new-member-email {
+    width: 400px;
+}
+.labels-selection span {
+    font-size: 9.75px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#wrapper {
+    position:absolute; z-index:1;
+    top:45px; bottom:48px; left:0;
+    width:20%;
+    background:#aaa;
+    overflow:auto;
+}
+
+#scroller {
+    position:relative; z-index:1;
+/*  -webkit-touch-callout:none;*/
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    width:100%;
+    padding:0;
+}
+
+#scroller ul {
+    list-style:none;
+    padding:0;
+    margin:0;
+    width:100%;
+    text-align:left;
+}
+
+#scroller li {
+    padding:0 10px;
+    height:40px;
+    line-height:40px;
+    border-bottom:1px solid #ccc;
+    border-top:1px solid #fff;
+    background-color:#fafafa;
+    font-size:14px;
+}
+
+/* ios */
+input[type="text"] {
+    -webkit-appearance:none;  /* Remove default shadow */
+}
