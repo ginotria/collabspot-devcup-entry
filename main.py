@@ -24,6 +24,7 @@ class MainHandler(webapp2.RequestHandler):
             url = users.create_login_url(self.request.uri)
             url_linktext = 'Login'
 
+
         template_values = {
             'logout_url': url,
             'url_linktext': url_linktext,

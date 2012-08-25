@@ -6,6 +6,8 @@
         methods: {
         }
     };
+    var pathname = (DC.pathname === undefined) ? window.location.pathname : DC.pathname;
+    DC.pathname = pathname;
 
     DC.models.Class = Capsule.Model.extend({
         type: 'class',
@@ -89,10 +91,60 @@
             console.log('App Initialization Complete.');
 
             this.collectomatic(this.model.attachments, DC.views.AttachmentView, {containerEl:this.$('.list-attachments')[0]});
+
+            this.initFileUpload();
+        },
+
+        initFileUpload: function() {
+            this.$().fileupload({
+                url: DC.pathname + 'upload'
+            }).bind('fileuploadsubmit', function(e, data) {
+                data.formData = {event: 1};
+            }).bind('fileuploadsend', function(e, data) {
+                humane.info('Start uploading...');
+            })
+            .bind('fileuploaddone', function(e, data) {
+                humane.info('Upload finished');
+            });
         },
 
         onAddAttachment: function() {
-           alert('test');
+            var that = this;
+            console.log('going to add an attachment');
+
+            var picker = new google.picker.PickerBuilder().
+                            addViewGroup(
+                                new google.picker.ViewGroup(google.picker.ViewId.DOCS).
+                                    addView(google.picker.ViewId.FOLDERS).
+                                    addView(google.picker.ViewId.DOCUMENTS).
+                                    addView(google.picker.ViewId.PRESENTATIONS).
+                                    addView(google.picker.ViewId.PDFS).
+                                    addView(google.picker.ViewId.SPREADSHEETS)).
+                            setCallback(function(data) {
+                                if (data.action === 'picked') {
+                                    for (var i = 0; i < data.docs.length; i++) {
+                                        var doc = data.docs[i],
+                                            thumbnail = null;
+                                        if (doc.thumbnails && doc.thumbnails.length > 0) {
+                                            thumbnail = doc.thumbnails[doc.thumbnails.length - 1].url;
+                                        }
+                                        // socket.emit('addAttachment', {
+                                        //      id: that.model.get('id'),
+                                        //      data: {
+                                        //          doc_id: doc.id,
+                                        //          url: doc.url,
+                                        //          type: doc.type,
+                                        //          embed_url: doc.embedUrl,
+                                        //          thumbnail: thumbnail,
+                                        //          name: doc.name
+                                        //      }
+                                        // });
+                                    }
+                                }
+                            }).build();
+
+            picker.setVisible(true);
+            $('.picker.modal-dialog').css('z-index', '2001');
         }
     });
 
